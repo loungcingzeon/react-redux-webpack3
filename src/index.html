@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+     <div class='wrapper'>
+        <button class='like-btn'>
+            <span>已点：</span>
+            <span class='like-text'>🙁</span>            
+        </button>
+    </div>
+
+
+    <div id="app"></div>
+
+    <script>
+        const Button = document.querySelector(".like-btn");
+        const ButtonText = Button.querySelector(".like-text");
+        let isLiked = false;
+        Button.addEventListener("click", () =>{
+            isLiked = ! isLiked;
+            if( isLiked ){
+                ButtonText.innerHTML = "🙁";
+            }else{
+                ButtonText.innerHTML = "😓";
+            }
+        }, false);
+    </script>
+</body>
+</html>
